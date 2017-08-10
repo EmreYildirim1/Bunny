@@ -23,9 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var spawnTimer: CFTimeInterval = 0
     
     var randomTime: Int = Int(arc4random_uniform (3) + UInt32(2))
-    
-    var spawnTimer2: CFTimeInterval = 0
-    
+
     let coinSpeed: CGFloat = 90
     
     let minDistance:CGFloat = 25
@@ -64,6 +62,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var coins : [SKSpriteNode] = []
     
     var center = CGFloat()
+    
+    var spawnBool = false
+    
     
     // It connects everything to the GameScene.swift
     override func didMove(to view: SKView) {
@@ -259,16 +260,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if velocityY > 500 {
             player.physicsBody?.velocity.dy = 500
         }
-        // It rolls the ground
-        scrollWorld()
-        
-        /* Process obstacles */
-        updateObstacles()
-        
-        updateObstacles2()
         
         spawnTimer += fixedDelta
-        spawnTimer2 += fixedDelta
+        
+        
+        updateObstacles()
+        updateObstacles2()
+        
+        if spawnTimer >= 2.5 {
+            switch arc4random_uniform(2) { //arc4random_uniform(x) - generates a random number from 0 to x - 1.
+            case 0:
+                spawnObstacles(y: 100, nodeSource: obstacleSource, nodeLayer: obstacleLayer)
+            case 1:
+                spawnObstacles(y: 300, nodeSource: obstacleSource2, nodeLayer: obstacleLayer2)
+            default: return
+    
+            }
+        }
+        // It rolls the ground
+        scrollWorld()
         
         /* Loop through scroll layer nodes */
         for ground in scrollLayer.children as! [SKSpriteNode] {
@@ -318,12 +328,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 coins.remove(at: coins.index(of: node)!)
             }
         }
-                // It loads the another scene if you collect or make something
-                if Int(scoreLabel.text!)! == 1000 {
-                    let skView = self.view as SKView!
-                    let scene = FinishScene(fileNamed: "FinishScene")!
-                    scene.scaleMode = .aspectFill
-                    skView?.presentScene(scene)
+        // It loads the another scene if you collect or make something
+        if Int(scoreLabel.text!)! == 1000 {
+            let skView = self.view as SKView!
+            let scene = FinishScene(fileNamed: "FinishScene")!
+            scene.scaleMode = .aspectFill
+            skView?.presentScene(scene)
         }
     }
     
@@ -336,8 +346,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnCoins() {
-        
-        coin.position.x -= scrollSpeed * CGFloat(fixedDelta)
         
         let spawnLocation = spawnPosition2.position.y
         
@@ -354,7 +362,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         obstacleLayer.position.x -= scrollSpeed * CGFloat(fixedDelta)
         
-        let spawnLocation = spawnPosition.position.x
+        
         
         /* Loop through obstacle layer nodes */
         for obstacle in obstacleLayer.children as! [SKReferenceNode] {
@@ -370,6 +378,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 obstacle.removeFromParent()
             }
         }
+        
+    }
+    
+    func spawnObstacles(y: CGFloat, nodeSource: SKNode, nodeLayer: SKNode) {
+        let spawnLocation = spawnPosition2.position.x
+        
+        /* Time to add a new obstacle? */
+        if spawnTimer > 2 {
+            /* Create a new obstacle by copying the source obstacle */
+            let newObstacle2 = nodeSource.copy() as! SKNode
+            nodeLayer.addChild(newObstacle2)
+            
+            /* Convert new node position back to obstacle layer space */
+            newObstacle2.position = self.convert(CGPoint(x:spawnLocation, y: y),  to: nodeLayer)
+            
+            // Reset spawn timer
+            spawnTimer = 0
+        }
+        spawnTimer+=fixedDelta
+    }
+    
+        
+    func spawnObstacles(){
+        
+        let spawnLocation = spawnPosition.position.x
+        
+        
         /* Time to add a new obstacle? */
         if spawnTimer >= Double(randomTime) {
             
@@ -384,7 +419,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 // Reset spawn timer
                 spawnTimer = 0
-                randomTime = Int(arc4random_uniform(2) + UInt32(2))
+                //randomTime = Int(arc4random_uniform(2) + UInt32(2))
             }
         }
         
@@ -395,8 +430,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Update Obstacles */
         
         obstacleLayer2.position.x -= scrollSpeed * CGFloat(fixedDelta)
-        
-        let spawnLocation = spawnPosition2.position.x
         
         /* Loop through obstacle layer nodes */
         for obstacle2 in obstacleLayer2.children as! [SKReferenceNode] {
@@ -412,9 +445,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 obstacle2.removeFromParent()
             }
         }
+    }
+    
+    func spawnObstacles2(){
+        
+        let spawnLocation = spawnPosition2.position.x
+        
         /* Time to add a new obstacle? */
-        if spawnTimer2 >= 3 {
-            
+        if spawnTimer > 2 {
             /* Create a new obstacle by copying the source obstacle */
             let newObstacle2 = obstacleSource2.copy() as! SKNode
             obstacleLayer2.addChild(newObstacle2)
@@ -424,10 +462,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             newObstacle2.position = self.convert(CGPoint(x:spawnLocation,y: 300),  to: obstacleLayer2)
             
             // Reset spawn timer
-            spawnTimer2 = 0
+            spawnTimer = 0
         }
-        //spawnTimer+=fixedDelta
+        spawnTimer+=fixedDelta
     }
-    
-    // claaaaaasssss
 }
+
+// claaaaaasssss
