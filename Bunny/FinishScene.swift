@@ -6,7 +6,6 @@
 //  Copyright © 2017 Emre Yildirim. All rights reserved.
 //
 
-
 import SpriteKit
 
 class FinishScene: SKScene, SKPhysicsContactDelegate {
@@ -99,7 +98,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
                 enemies.remove(at: enemies.index(of: node)!)
             }
         }
-        
+    
         bombSpawnTimer += fixedDelta
         
         for node in tacos {
@@ -109,16 +108,22 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
                 tacos.remove(at: tacos.index(of: node)!)
             }
         }
-        
         tacoSpawnTimer += fixedDelta
         
+        // It loads the another scene if you collect or make something
+        if Int(scoreLabel.text!)! == 2 {
+            let skView = self.view as SKView!
+            let scene = EndScene(fileNamed: "EndScene")!
+            scene.scaleMode = .aspectFill
+            skView?.presentScene(scene)
+        }
     }
     
     func initializeGame() {
         physicsWorld.contactDelegate = self
         player = childNode(withName: "Player") as! Player!
         enemy = childNode(withName: "enemy") as! SKSpriteNode
-        center = UIScreen.main.bounds.size.width
+        center = UIScreen.main.bounds.size.width / 2
         bomb = childNode(withName: "bomb") as! SKSpriteNode
         taco = childNode(withName: "taco") as! SKSpriteNode
         scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
@@ -157,7 +162,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
                 nodeB?.removeFromParent()
             }
             let skView = self.view as SKView!
-            let scene = GameOver(fileNamed: "GameOver")
+            let scene = GameOver2(fileNamed: "GameOver2")
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
@@ -211,8 +216,9 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         tacos.append(tacoCopy)
         addChild(tacoCopy)
     }
-}
+
 
 func clamp<T: Comparable>(value: T, lower: T, upper: T) -> T {
     return min(max(value, lower), upper)
+    }
 }

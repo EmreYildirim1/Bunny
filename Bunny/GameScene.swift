@@ -208,22 +208,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     swiped = true
                     switch (x,y) {
                     case (0,1):
-                        print("swiped up")
                         if player.position.y <= CGFloat(300) {
                             // The players jump height
                             player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
                             player.run(SKAction(named: "Jump")!)
                         }
                     case (0,-1):
-                        print("swiped down")
                         player.run(SKAction(named: "Slide")!)
                     case (-1,0):
                         print("swiped left")
                     case (1,0):
-                        print("swiped right")
                         player.run(SKAction(named: "Attack")!)
                     case (1,1):
-                        print("swiped diag up-right")
                         if player.position.y <= CGFloat(450) {
                             // The players jump height
                             player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
@@ -234,7 +230,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     case (-1,1):
                         print("swiped diag up-left")
                     case (1,-1):
-                        print("swiped diag down-right")
                         player.run(SKAction(named: "Slide")!)
                     default:
                         swiped = false
@@ -246,7 +241,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         start = nil
         if !swiped {
             // Process non-swipes (taps, etc.)
-            print("not a swipe")
         }
     }
     
@@ -329,9 +323,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         // It loads the another scene if you collect or make something
-        if Int(scoreLabel.text!)! == 1000 {
+        if Int(scoreLabel.text!)! == 10 {
             let skView = self.view as SKView!
-            let scene = FinishScene(fileNamed: "FinishScene")!
+            let scene = Congratulations(fileNamed: "Congratulations")!
             scene.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
@@ -378,7 +372,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 obstacle.removeFromParent()
             }
         }
-        
     }
     
     func spawnObstacles(y: CGFloat, nodeSource: SKNode, nodeLayer: SKNode) {

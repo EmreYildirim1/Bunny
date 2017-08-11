@@ -1,22 +1,22 @@
 //
-//  MainMenu.swift
+//  EndScene.swift
 //  Bunny
 //
-//  Created by Emre Yıldırım on 26/07/2017.
+//  Created by Emre Yıldırım on 10/08/2017.
 //  Copyright © 2017 Emre Yildirim. All rights reserved.
 //
 
 import SpriteKit
 
-class MainMenu: SKScene {
+class EndScene: SKScene {
     
-    var buttonPlay: MSButtonNode!
+    var buttonMenu: MSButtonNode!
     
     override func didMove(to view: SKView) {
-        buttonPlay = childNode(withName: "buttonPlay") as! MSButtonNode
-        buttonPlay.selectedHandler = {
+        buttonMenu = childNode(withName: "buttonMenu") as! MSButtonNode
+        buttonMenu.selectedHandler = {
             let skView = self.view as SKView!
-            let scene = GameScene(fileNamed: "GameScene")
+            let scene = MainMenu(fileNamed: "MainMenu")
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }

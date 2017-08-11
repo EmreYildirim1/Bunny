@@ -1,14 +1,14 @@
 //
-//  MainMenu.swift
+//  Congratulations.swift
 //  Bunny
 //
-//  Created by Emre Yıldırım on 26/07/2017.
+//  Created by Emre Yıldırım on 10/08/2017.
 //  Copyright © 2017 Emre Yildirim. All rights reserved.
 //
 
 import SpriteKit
 
-class MainMenu: SKScene {
+class Congratulations: SKScene {
     
     var buttonPlay: MSButtonNode!
     
@@ -16,7 +16,7 @@ class MainMenu: SKScene {
         buttonPlay = childNode(withName: "buttonPlay") as! MSButtonNode
         buttonPlay.selectedHandler = {
             let skView = self.view as SKView!
-            let scene = GameScene(fileNamed: "GameScene")
+            let scene = FinishScene(fileNamed: "FinishScene")
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
