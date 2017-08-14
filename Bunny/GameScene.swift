@@ -220,9 +220,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     case (1,0):
                         player.run(SKAction(named: "Attack")!)
                     case (1,1):
-                        if player.position.y <= CGFloat(450) {
+                        if player.position.y <= CGFloat(300) {
                             // The players jump height
-                            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 600))
+                            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 500))
                             player.run(SKAction(named: "Jump")!)
                         }
                     case (-1,-1):
@@ -323,7 +323,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         // It loads the another scene if you collect or make something
-        if Int(scoreLabel.text!)! == 10 {
+        if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = Congratulations(fileNamed: "Congratulations")!
             scene.scaleMode = .aspectFill

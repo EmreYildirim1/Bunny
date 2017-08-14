@@ -12,28 +12,28 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     
     let fixedDelta: CGFloat = 1.0 / 60.0 // 60 FPS
     
-    var enemySpawnTimer: CGFloat = 0
+    var watermelonSpawnTimer: CGFloat = 0
     
-    var bombSpawnTimer: CGFloat = 0
+    var katanaSpawnTimer: CGFloat = 0
     
-    var tacoSpawnTimer: CGFloat = 0
+    var bananaSpawnTimer: CGFloat = 0
     
     /* it gives enemy speed (velocity) */
-    let enemySpeed: CGFloat = 1000
+    let watermelonSpeed: CGFloat = 1000
     
     /* it gives bomb speed (velocity)*/
-    let bombSpeed: CGFloat = 1000
+    let katanaSpeed: CGFloat = 1000
     
     /* it gives taco speed (velocity) */
-    let tacoSpeed: CGFloat = 1000
+    let bananaSpeed: CGFloat = 1000
     
     var player : Player!
     
-    var bomb : SKSpriteNode!
+    var katana : SKSpriteNode!
     
-    var enemy : SKSpriteNode!
+    var watermelon : SKSpriteNode!
     
-    var taco : SKSpriteNode!
+    var banana : SKSpriteNode!
     
     var scoreLabel : SKLabelNode!
     
@@ -51,11 +51,11 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     
     var canMove = false, moveLeft = false
     
-    var enemies: [SKSpriteNode] = []
+    var watermelons: [SKSpriteNode] = []
     
-    var bombs: [SKSpriteNode] = []
+    var katanas: [SKSpriteNode] = []
     
-    var tacos: [SKSpriteNode] = []
+    var bananas: [SKSpriteNode] = []
     
     override func didMove(to view: SKView) {
         self.view?.showsPhysics = false
@@ -66,52 +66,52 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         managePlayer()
         player.position.x = clamp(value: player.position.x, lower: player.size.width / 2, upper: UIScreen.main.bounds.size.width * 2 - player.size.width / 2)
         
-        if enemySpawnTimer > 2.5 {
-            spawnEnemy()
-            enemySpawnTimer = 0
+        if watermelonSpawnTimer > 3.5 {
+            spawnWatermelon()
+            watermelonSpawnTimer = 0
         }
         
-        if bombSpawnTimer > 0.5  {
-            spawnBombs()
-            bombSpawnTimer = 0
+        if katanaSpawnTimer > 1.5  {
+            spawnKatanas()
+            katanaSpawnTimer = 0
         }
         
-        if tacoSpawnTimer > 1.5 {
-            spawnTacos()
-            tacoSpawnTimer = 0
+        if bananaSpawnTimer > 2.5 {
+            spawnBananas()
+            bananaSpawnTimer = 0
         }
         
-        for node in bombs {
-            node.position.y -= bombSpeed * fixedDelta
+        for node in katanas {
+            node.position.y -= katanaSpeed * fixedDelta
             if node.position.y < -UIScreen.main.bounds.height * 2 {
                 node.removeFromParent()
-                bombs.remove(at: bombs.index(of: node)!)
+                katanas.remove(at: katanas.index(of: node)!)
             }
         }
         
-        enemySpawnTimer += fixedDelta
+        watermelonSpawnTimer += fixedDelta
         
-        for node in enemies {
-            node.position.y -= enemySpeed * fixedDelta
+        for node in watermelons {
+            node.position.y -= watermelonSpeed * fixedDelta
             if node.position.y < -UIScreen.main.bounds.size.height * 2 {
                 node.removeFromParent()
-                enemies.remove(at: enemies.index(of: node)!)
+                watermelons.remove(at: watermelons.index(of: node)!)
             }
         }
     
-        bombSpawnTimer += fixedDelta
+        katanaSpawnTimer += fixedDelta
         
-        for node in tacos {
-            node.position.y -= tacoSpeed * fixedDelta
+        for node in bananas {
+            node.position.y -= bananaSpeed * fixedDelta
             if node.position.y < -UIScreen.main.bounds.size.height * 2 {
                 node.removeFromParent()
-                tacos.remove(at: tacos.index(of: node)!)
+                bananas.remove(at: bananas.index(of: node)!)
             }
         }
-        tacoSpawnTimer += fixedDelta
+        bananaSpawnTimer += fixedDelta
         
         // It loads the another scene if you collect or make something
-        if Int(scoreLabel.text!)! == 2 {
+        if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")!
             scene.scaleMode = .aspectFill
@@ -122,10 +122,10 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     func initializeGame() {
         physicsWorld.contactDelegate = self
         player = childNode(withName: "Player") as! Player!
-        enemy = childNode(withName: "enemy") as! SKSpriteNode
+        watermelon = childNode(withName: "watermelon") as! SKSpriteNode
         center = UIScreen.main.bounds.size.width / 2
-        bomb = childNode(withName: "bomb") as! SKSpriteNode
-        taco = childNode(withName: "taco") as! SKSpriteNode
+        katana = childNode(withName: "katana") as! SKSpriteNode
+        banana = childNode(withName: "banana") as! SKSpriteNode
         scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
     }
     
@@ -135,30 +135,30 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         
         // it is the points of enemy, taco and bomb
         
-        if nodeA?.name == "enemy" || nodeB?.name == "enemy" {
+        if nodeA?.name == "watermelon" || nodeB?.name == "watermelon" {
             score += 2
-            if nodeA?.name == "enemy" {
-                enemies.remove(at: enemies.index(of: nodeA as! SKSpriteNode)!)
+            if nodeA?.name == "watermelon" {
+                watermelons.remove(at: watermelons.index(of: nodeA as! SKSpriteNode)!)
                 nodeA?.removeFromParent()
-            } else if nodeB?.name == "enemy" {
-                enemies.remove(at: enemies.index(of: nodeB as! SKSpriteNode)!)
+            } else if nodeB?.name == "watermelon" {
+                watermelons.remove(at: watermelons.index(of: nodeB as! SKSpriteNode)!)
                 nodeB?.removeFromParent()
             }
-        } else if nodeA?.name == "taco" || nodeB?.name == "taco" {
+        } else if nodeA?.name == "banana" || nodeB?.name == "banana" {
             score += 1
-            if nodeA?.name == "taco" {
-                tacos.remove(at: tacos.index(of: nodeA as! SKSpriteNode)!)
+            if nodeA?.name == "banana" {
+                bananas.remove(at: bananas.index(of: nodeA as! SKSpriteNode)!)
                 nodeA?.removeFromParent()
-            } else if nodeB?.name == "taco" {
-                tacos.remove(at: tacos.index(of: nodeB as! SKSpriteNode)!)
+            } else if nodeB?.name == "banana" {
+                bananas.remove(at: bananas.index(of: nodeB as! SKSpriteNode)!)
                 nodeB?.removeFromParent()
             }
-        } else if nodeA?.name == "bomb" || nodeB?.name == "bomb" {
-            if nodeA?.name == "bomb" {
-                bombs.remove(at: bombs.index(of: nodeA as! SKSpriteNode)!)
+        } else if nodeA?.name == "katana" || nodeB?.name == "katana" {
+            if nodeA?.name == "katana" {
+                katanas.remove(at: katanas.index(of: nodeA as! SKSpriteNode)!)
                 nodeA?.removeFromParent()
-            } else if nodeB?.name == "bomb" {
-                bombs.remove(at: bombs.index(of: nodeB as! SKSpriteNode)!)
+            } else if nodeB?.name == "katanas" {
+                katanas.remove(at: katanas.index(of: nodeB as! SKSpriteNode)!)
                 nodeB?.removeFromParent()
             }
             let skView = self.view as SKView!
@@ -193,28 +193,28 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func spawnEnemy() {
+    func spawnWatermelon() {
         let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
-        let enemyCopy = enemy.copy() as! SKSpriteNode
-        enemyCopy.position.x = x
-        enemies.append(enemyCopy)
-        addChild(enemyCopy)
+        let watermelonCopy = watermelon.copy() as! SKSpriteNode
+        watermelonCopy.position.x = x
+        watermelons.append(watermelonCopy)
+        addChild(watermelonCopy)
     }
     
-    func spawnBombs() {
+    func spawnKatanas() {
         let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
-        let bombCopy = bomb.copy() as! SKSpriteNode
-        bombCopy.position.x = x
-        bombs.append(bombCopy)
-        addChild(bombCopy)
+        let katanaCopy = katana.copy() as! SKSpriteNode
+        katanaCopy.position.x = x
+        katanas.append(katanaCopy)
+        addChild(katanaCopy)
     }
     
-    func spawnTacos() {
+    func spawnBananas() {
         let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
-        let tacoCopy = taco.copy() as! SKSpriteNode
-        tacoCopy.position.x = x
-        tacos.append(tacoCopy)
-        addChild(tacoCopy)
+        let bananaCopy = banana.copy() as! SKSpriteNode
+        bananaCopy.position.x = x
+        bananas.append(bananaCopy)
+        addChild(bananaCopy)
     }
 
 
