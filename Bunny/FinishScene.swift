@@ -66,17 +66,17 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         managePlayer()
         player.position.x = clamp(value: player.position.x, lower: player.size.width / 2, upper: UIScreen.main.bounds.size.width * 2 - player.size.width / 2)
         
-        if watermelonSpawnTimer > 3.5 {
+        if watermelonSpawnTimer > 1 {
             spawnWatermelon()
             watermelonSpawnTimer = 0
         }
         
-        if katanaSpawnTimer >  1.5 {
+        if katanaSpawnTimer >  0.5 {
             spawnKatanas()
             katanaSpawnTimer = 0
         }
         
-        if bananaSpawnTimer > 2.5 {
+        if bananaSpawnTimer > 2 {
             spawnBananas()
             bananaSpawnTimer = 0
         }
@@ -111,7 +111,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         bananaSpawnTimer += fixedDelta
         
         // It loads the another scene if you collect or make something
-        if Int(scoreLabel.text!)! == 10 {
+        if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")!
             scene.scaleMode = .aspectFill
@@ -123,7 +123,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         player = childNode(withName: "Player") as! Player!
         watermelon = childNode(withName: "watermelon") as! SKSpriteNode
-        center = UIScreen.main.bounds.size.width / 2
+        center = self.frame.maxX / 2
         katana = childNode(withName: "katana") as! SKSpriteNode
         banana = childNode(withName: "banana") as! SKSpriteNode
         scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
@@ -136,7 +136,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         // it is the points of enemy, taco and bomb
         
         if nodeA?.name == "watermelon" || nodeB?.name == "watermelon" {
-            score += 2
+            score += 1
             if nodeA?.name == "watermelon" {
                 watermelons.remove(at: watermelons.index(of: nodeA as! SKSpriteNode)!)
                 nodeA?.removeFromParent()

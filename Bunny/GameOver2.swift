@@ -24,12 +24,6 @@ class GameOver2: SKScene {
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
-        buttonMenu = childNode(withName: "buttonMenu") as! MSButtonNode
-        buttonMenu.selectedHandler = {
-            let skView = self.view as SKView!
-            let scene = MainMenu(fileNamed: "MainMenu")
-            scene?.scaleMode = .aspectFill
-            skView?.presentScene(scene)
-        }
     }
 }
+

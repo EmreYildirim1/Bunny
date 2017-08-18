@@ -10,13 +10,22 @@ import SpriteKit
 
 class EndScene: SKScene {
     
-    var buttonMenu: MSButtonNode!
+    var buttonNext: MSButtonNode!
+    var buttonNext2: MSButtonNode!
     
     override func didMove(to view: SKView) {
-        buttonMenu = childNode(withName: "buttonMenu") as! MSButtonNode
-        buttonMenu.selectedHandler = {
+        buttonNext = childNode(withName: "buttonNext") as! MSButtonNode
+        buttonNext.selectedHandler = {
             let skView = self.view as SKView!
-            let scene = MainMenu(fileNamed: "MainMenu")
+            let scene = Gmail(fileNamed: "Gmail")
+            scene?.scaleMode = .aspectFill
+            skView?.presentScene(scene)
+        }
+    
+        buttonNext2 = childNode(withName: "buttonNext2") as! MSButtonNode
+        buttonNext2.selectedHandler = {
+            let skView = self.view as SKView!
+            let scene = Gmail(fileNamed: "Gmail")
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
