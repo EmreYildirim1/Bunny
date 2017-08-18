@@ -11,6 +11,7 @@ import SpriteKit
 class MainMenu: SKScene {
     
     var buttonPlay: MSButtonNode!
+    var buttonPlay2: MSButtonNode!
     
     override func didMove(to view: SKView) {
         buttonPlay = childNode(withName: "buttonPlay") as! MSButtonNode
@@ -19,6 +20,15 @@ class MainMenu: SKScene {
             let scene = GameScene(fileNamed: "GameScene")
             scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
+        }
+        
+        buttonPlay2 = childNode(withName: "buttonPlay2") as! MSButtonNode
+        buttonPlay2.selectedHandler = {
+            let skView = self.view as SKView!
+            let scene = GameScene(fileNamed: "GameScene")
+            scene?.scaleMode = .aspectFill
+            skView?.presentScene(scene)
+        
         }
     }
 }

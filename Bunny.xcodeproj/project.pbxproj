@@ -45,6 +45,7 @@
 		842C1F121F3A926A00163014 /* icons8-Katana-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C1F111F3A926A00163014 /* icons8-Katana-48.png */; };
 		842C1F141F3A9A8C00163014 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C1F131F3A9A8C00163014 /* Player.swift */; };
 		8434366F1F2A62DD00DF5527 /* Obstacle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8434366E1F2A62DD00DF5527 /* Obstacle.sks */; };
+		8440CF291F4683FA008E9F0E /* 250-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8440CF281F4683FA008E9F0E /* 250-3.png */; };
 		845503561F2A7203003BBA19 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845503551F2A7203003BBA19 /* CGFloat+Extensions.swift */; };
 		84627D501F256C3A00E1678F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84627D4F1F256C3A00E1678F /* AppDelegate.swift */; };
 		84627D541F256C3A00E1678F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84627D531F256C3A00E1678F /* Actions.sks */; };
@@ -56,6 +57,9 @@
 		84627D6C1F25735E00E1678F /* skill-desc_0000_foreground.png in Resources */ = {isa = PBXBuildFile; fileRef = 84627D6B1F25735E00E1678F /* skill-desc_0000_foreground.png */; };
 		84627D6E1F2573B200E1678F /* skill-desc_0003_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84627D6D1F2573B200E1678F /* skill-desc_0003_bg.png */; };
 		84627D711F2577F900E1678F /* Tile (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 84627D701F2577F900E1678F /* Tile (2).png */; };
+		8497B60A1F46866B00984CEE /* PLAY-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8497B6091F46866B00984CEE /* PLAY-5.png */; };
+		8497B60C1F4687B800984CEE /* GAME-OVER-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8497B60B1F4687B800984CEE /* GAME-OVER-4.png */; };
+		8497B60E1F4687CE00984CEE /* Restart-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8497B60D1F4687CE00984CEE /* Restart-4.png */; };
 		84A897621F30BAFF00336EF1 /* Obstacle2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84A897611F30BAFF00336EF1 /* Obstacle2.sks */; };
 		84D173A41F321A2900715214 /* FinishScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D173A31F321A2900715214 /* FinishScene.sks */; };
 		84D173A61F321A3F00715214 /* FinishScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D173A51F321A3F00715214 /* FinishScene.swift */; };
@@ -107,6 +111,7 @@
 		842C1F111F3A926A00163014 /* icons8-Katana-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Katana-48.png"; sourceTree = "<group>"; };
 		842C1F131F3A9A8C00163014 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8434366E1F2A62DD00DF5527 /* Obstacle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle.sks; sourceTree = "<group>"; };
+		8440CF281F4683FA008E9F0E /* 250-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "250-3.png"; sourceTree = "<group>"; };
 		845503551F2A7203003BBA19 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		84627D4C1F256C3A00E1678F /* Bunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84627D4F1F256C3A00E1678F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +125,9 @@
 		84627D6B1F25735E00E1678F /* skill-desc_0000_foreground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "skill-desc_0000_foreground.png"; path = "../skill-desc_0000_foreground.png"; sourceTree = "<group>"; };
 		84627D6D1F2573B200E1678F /* skill-desc_0003_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skill-desc_0003_bg.png"; sourceTree = "<group>"; };
 		84627D701F2577F900E1678F /* Tile (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tile (2).png"; sourceTree = "<group>"; };
+		8497B6091F46866B00984CEE /* PLAY-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PLAY-5.png"; sourceTree = "<group>"; };
+		8497B60B1F4687B800984CEE /* GAME-OVER-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GAME-OVER-4.png"; sourceTree = "<group>"; };
+		8497B60D1F4687CE00984CEE /* Restart-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restart-4.png"; sourceTree = "<group>"; };
 		84A897611F30BAFF00336EF1 /* Obstacle2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle2.sks; sourceTree = "<group>"; };
 		84D173A31F321A2900715214 /* FinishScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FinishScene.sks; sourceTree = "<group>"; };
 		84D173A51F321A3F00715214 /* FinishScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishScene.swift; sourceTree = "<group>"; };
@@ -174,15 +182,15 @@
 				842C1F151F3A9DC200163014 /* PlayerClass */,
 				84627D4F1F256C3A00E1678F /* AppDelegate.swift */,
 				84627D531F256C3A00E1678F /* Actions.sks */,
-				84F99B891F2933D000212605 /* MainMenu.sks */,
-				840BD4241F2AC17E00B7CFEB /* GameOver.sks */,
-				84131D751F3E225D00D63541 /* GameOver2.sks */,
 				8434366E1F2A62DD00DF5527 /* Obstacle.sks */,
 				84A897611F30BAFF00336EF1 /* Obstacle2.sks */,
-				841B36251F38A603009F687A /* GameScene.sks */,
-				84D173A31F321A2900715214 /* FinishScene.sks */,
 				84F10B161F33965E0030A365 /* Player.sks */,
+				84F99B891F2933D000212605 /* MainMenu.sks */,
+				841B36251F38A603009F687A /* GameScene.sks */,
+				840BD4241F2AC17E00B7CFEB /* GameOver.sks */,
 				8422AB171F3CF26F00139D39 /* Congratulations.sks */,
+				84D173A31F321A2900715214 /* FinishScene.sks */,
+				84131D751F3E225D00D63541 /* GameOver2.sks */,
 				8422AB191F3CF66A00139D39 /* EndScene.sks */,
 				84627D551F256C3A00E1678F /* GameScene.swift */,
 				8422AB151F3CF25700139D39 /* Congratulations.swift */,
@@ -205,6 +213,10 @@
 		84627D6F1F25762400E1678F /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				8497B6091F46866B00984CEE /* PLAY-5.png */,
+				8497B60D1F4687CE00984CEE /* Restart-4.png */,
+				8497B60B1F4687B800984CEE /* GAME-OVER-4.png */,
+				8440CF281F4683FA008E9F0E /* 250-3.png */,
 				84F4AEBC1F41EE84000D7697 /* Stone Wall.png */,
 				84131D791F3E282300D63541 /* icons8-Home-48.png */,
 				84131D731F3E0A2600D63541 /* stones.png */,
@@ -309,6 +321,7 @@
 				840BD4271F2AC26600B7CFEB /* Game-Over-3.png in Resources */,
 				841EEF361F263B9A00981E9A /* Run__002.png in Resources */,
 				84627D711F2577F900E1678F /* Tile (2).png in Resources */,
+				8497B60E1F4687CE00984CEE /* Restart-4.png in Resources */,
 				840BD4311F2AC80E00B7CFEB /* TombStone (1).png in Resources */,
 				84F99B8A1F2933D000212605 /* MainMenu.sks in Resources */,
 				8426E5981F33EDDE007B4F6B /* lava_ground_cracked_tileset_2.png in Resources */,
@@ -322,10 +335,12 @@
 				84131D761F3E225D00D63541 /* GameOver2.sks in Resources */,
 				841EEF3A1F263BD800981E9A /* Run__004.png in Resources */,
 				8422AB1A1F3CF66A00139D39 /* EndScene.sks in Resources */,
+				8440CF291F4683FA008E9F0E /* 250-3.png in Resources */,
 				84627D6E1F2573B200E1678F /* skill-desc_0003_bg.png in Resources */,
 				84627D5B1F256C3A00E1678F /* Main.storyboard in Resources */,
 				841EEF421F263ED400981E9A /* Run__007.png in Resources */,
 				8405CD371F3DEFFB00938844 /* 250-2.png in Resources */,
+				8497B60A1F46866B00984CEE /* PLAY-5.png in Resources */,
 				8434366F1F2A62DD00DF5527 /* Obstacle.sks in Resources */,
 				84E07EA41F2B71D8002F678C /* Infinite-Ninja.png in Resources */,
 				84A897621F30BAFF00336EF1 /* Obstacle2.sks in Resources */,
@@ -350,6 +365,7 @@
 				84F10B171F33965E0030A365 /* Player.sks in Resources */,
 				84627D541F256C3A00E1678F /* Actions.sks in Resources */,
 				842C1F0E1F3A921E00163014 /* icons8-Watermelon-48.png in Resources */,
+				8497B60C1F4687B800984CEE /* GAME-OVER-4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

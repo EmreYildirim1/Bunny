@@ -137,6 +137,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if nodeA.name == "obstacle" || nodeB.name == "obstacle" {
+            let previousScore = defaults.integer(forKey: "highScore")
+            if points > previousScore {
+                defaults.set(points, forKey: "highScore")
+            }
             
             if nodeA.name == "obstacle"{
                 nodeA.removeFromParent()

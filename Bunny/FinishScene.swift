@@ -71,7 +71,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
             watermelonSpawnTimer = 0
         }
         
-        if katanaSpawnTimer > 1.5  {
+        if katanaSpawnTimer >  1.5 {
             spawnKatanas()
             katanaSpawnTimer = 0
         }
@@ -111,7 +111,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         bananaSpawnTimer += fixedDelta
         
         // It loads the another scene if you collect or make something
-        if Int(scoreLabel.text!)! == 250 {
+        if Int(scoreLabel.text!)! == 10 {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")!
             scene.scaleMode = .aspectFill
@@ -194,7 +194,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnWatermelon() {
-        let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
+        let x = CGFloat(arc4random_uniform(1333)) //- center
         let watermelonCopy = watermelon.copy() as! SKSpriteNode
         watermelonCopy.position.x = x
         watermelons.append(watermelonCopy)
@@ -202,7 +202,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnKatanas() {
-        let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
+        let x = CGFloat(arc4random_uniform(1333)) - center
         let katanaCopy = katana.copy() as! SKSpriteNode
         katanaCopy.position.x = x
         katanas.append(katanaCopy)
@@ -210,7 +210,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnBananas() {
-        let x = CGFloat(arc4random_uniform(UInt32(center * 2))) - center
+        let x = CGFloat(arc4random_uniform(1333)) - center
         let bananaCopy = banana.copy() as! SKSpriteNode
         bananaCopy.position.x = x
         bananas.append(bananaCopy)
