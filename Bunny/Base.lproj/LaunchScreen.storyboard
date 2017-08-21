@@ -26,7 +26,7 @@
                                 <rect key="frame" x="248" y="98" width="171" height="80"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-HY-0KL">
-                                <rect key="frame" x="194" y="168" width="279" height="80"/>
+                                <rect key="frame" x="215" y="175" width="279" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>

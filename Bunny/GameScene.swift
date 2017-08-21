@@ -147,7 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
-                scene?.scaleMode = .aspectFill
+                scene?.scaleMode = .aspectFit
                 skView?.presentScene(scene)
                 
             }
@@ -160,7 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
-                scene?.scaleMode = .aspectFill
+                scene?.scaleMode = .aspectFit
                 skView?.presentScene(scene)
             }
         }
@@ -330,7 +330,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = Congratulations(fileNamed: "Congratulations")!
-            scene.scaleMode = .aspectFill
+            scene.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     }

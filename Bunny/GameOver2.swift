@@ -21,7 +21,7 @@ class GameOver2: SKScene {
         buttonRestart.selectedHandler = {
             let skView = self.view as SKView!
             let scene = FinishScene(fileNamed: "FinishScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     }

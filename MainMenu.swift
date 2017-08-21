@@ -18,7 +18,7 @@ class MainMenu: SKScene {
         buttonPlay.selectedHandler = {
             let skView = self.view as SKView!
             let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
         
@@ -26,7 +26,7 @@ class MainMenu: SKScene {
         buttonPlay2.selectedHandler = {
             let skView = self.view as SKView!
             let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         
         }
