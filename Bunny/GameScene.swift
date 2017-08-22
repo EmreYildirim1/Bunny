@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -147,7 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
-                scene?.scaleMode = .aspectFit
+                scene?.scaleMode = .aspectFill
                 skView?.presentScene(scene)
                 
             }
@@ -160,7 +161,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
-                scene?.scaleMode = .aspectFit
+                scene?.scaleMode = .aspectFill
                 skView?.presentScene(scene)
             }
         }
@@ -330,7 +331,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = Congratulations(fileNamed: "Congratulations")!
-            scene.scaleMode = .aspectFit
+            scene.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
     }
@@ -456,7 +457,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             /* Convert new node position back to obstacle layer space */
-            newObstacle2.position = self.convert(CGPoint(x:spawnLocation,y: 300),  to: obstacleLayer2)
+            newObstacle2.position = self.convert(CGPoint(x:spawnLocation,y: 305),  to: obstacleLayer2)
             
             // Reset spawn timer
             spawnTimer = 0

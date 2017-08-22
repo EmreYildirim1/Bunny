@@ -25,14 +25,17 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="250-3" translatesAutoresizingMaskIntoConstraints="NO" id="IQH-CZ-zTq">
                                 <rect key="frame" x="248" y="98" width="171" height="80"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-HY-0KL">
-                                <rect key="frame" x="215" y="175" width="279" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="Games" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-HY-0KL">
+                                <rect key="frame" x="194" y="177" width="279" height="80"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.39215686274509803" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="eP0-HY-0KL" firstAttribute="top" secondItem="IQH-CZ-zTq" secondAttribute="bottom" constant="8" id="3a8-DY-OBV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eP0-HY-0KL" secondAttribute="trailing" constant="174" id="55a-Y7-LDK"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="IQH-CZ-zTq" secondAttribute="bottom" constant="197" id="FHV-iF-h5X"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eP0-HY-0KL" secondAttribute="bottom" constant="109" id="LuY-ST-IAg"/>
+                            <constraint firstItem="eP0-HY-0KL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="174" id="Nqc-1a-7KD"/>
                             <constraint firstItem="IQH-CZ-zTq" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="228" id="R1s-WW-O2X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IQH-CZ-zTq" secondAttribute="trailing" constant="228" id="k4X-sg-WCY"/>
                             <constraint firstItem="IQH-CZ-zTq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="78" id="pNp-bn-Bcu"/>

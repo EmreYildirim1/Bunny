@@ -114,7 +114,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
         if Int(scoreLabel.text!)! == 250 {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")!
-            scene.scaleMode = .aspectFit
+            scene.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
     }
@@ -163,7 +163,7 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
             }
             let skView = self.view as SKView!
             let scene = GameOver2(fileNamed: "GameOver2")
-            scene?.scaleMode = .aspectFit
+            scene?.scaleMode = .aspectFill
             skView?.presentScene(scene)
         }
     }
