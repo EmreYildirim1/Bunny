@@ -13,6 +13,7 @@
 		840181D41F4763A3003DB23C /* Next-Page.png in Resources */ = {isa = PBXBuildFile; fileRef = 840181D31F4763A3003DB23C /* Next-Page.png */; };
 		840181D61F476A5F003DB23C /* Back-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 840181D51F476A5F003DB23C /* Back-2.png */; };
 		8404D3A61F2778C400A45D94 /* Unknown-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8404D3A51F2778C400A45D94 /* Unknown-4.png */; };
+		8408E8601F5323A400746937 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8408E85F1F5323A400746937 /* MainMenu.sks */; };
 		840BD4211F2ABDB800B7CFEB /* spike A.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BD4201F2ABDB800B7CFEB /* spike A.png */; };
 		840BD4251F2AC17E00B7CFEB /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 840BD4241F2AC17E00B7CFEB /* GameOver.sks */; };
 		840BD4271F2AC26600B7CFEB /* Game-Over-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 840BD4261F2AC26600B7CFEB /* Game-Over-3.png */; };
@@ -62,7 +63,6 @@
 		84D173A61F321A3F00715214 /* FinishScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D173A51F321A3F00715214 /* FinishScene.swift */; };
 		84F10B171F33965E0030A365 /* Player.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84F10B161F33965E0030A365 /* Player.sks */; };
 		84F4AEBD1F41EE84000D7697 /* Stone Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F4AEBC1F41EE84000D7697 /* Stone Wall.png */; };
-		84F99B8A1F2933D000212605 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84F99B891F2933D000212605 /* MainMenu.sks */; };
 		84F99B8E1F29355400212605 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F99B8D1F29355400212605 /* MainMenu.swift */; };
 		84F99B901F29358700212605 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F99B8F1F29358700212605 /* MSButtonNode.swift */; };
 		84FCCB531F4B54A700F638CA /* Menu Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB521F4B54A700F638CA /* Menu Music.mp3 */; };
@@ -84,6 +84,7 @@
 		840181D31F4763A3003DB23C /* Next-Page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Next-Page.png"; sourceTree = "<group>"; };
 		840181D51F476A5F003DB23C /* Back-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-2.png"; sourceTree = "<group>"; };
 		8404D3A51F2778C400A45D94 /* Unknown-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Unknown-4.png"; path = "../Unknown-4.png"; sourceTree = "<group>"; };
+		8408E85F1F5323A400746937 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		840BD4201F2ABDB800B7CFEB /* spike A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spike A.png"; sourceTree = "<group>"; };
 		840BD4241F2AC17E00B7CFEB /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 		840BD4261F2AC26600B7CFEB /* Game-Over-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game-Over-3.png"; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		84D173A51F321A3F00715214 /* FinishScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishScene.swift; sourceTree = "<group>"; };
 		84F10B161F33965E0030A365 /* Player.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Player.sks; sourceTree = "<group>"; };
 		84F4AEBC1F41EE84000D7697 /* Stone Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stone Wall.png"; sourceTree = "<group>"; };
-		84F99B891F2933D000212605 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		84F99B8D1F29355400212605 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenu.swift; path = ../MainMenu.swift; sourceTree = "<group>"; };
 		84F99B8F1F29358700212605 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		84FCCB521F4B54A700F638CA /* Menu Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Menu Music.mp3"; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 				8434366E1F2A62DD00DF5527 /* Obstacle.sks */,
 				84A897611F30BAFF00336EF1 /* Obstacle2.sks */,
 				84F10B161F33965E0030A365 /* Player.sks */,
-				84F99B891F2933D000212605 /* MainMenu.sks */,
+				8408E85F1F5323A400746937 /* MainMenu.sks */,
 				841B36251F38A603009F687A /* GameScene.sks */,
 				840BD4241F2AC17E00B7CFEB /* GameOver.sks */,
 				8422AB171F3CF26F00139D39 /* Congratulations.sks */,
@@ -338,7 +338,6 @@
 				84FCCB711F4BC60A00F638CA /* emre kapak 7.png in Resources */,
 				84627D711F2577F900E1678F /* Tile (2).png in Resources */,
 				8497B60E1F4687CE00984CEE /* Restart-4.png in Resources */,
-				84F99B8A1F2933D000212605 /* MainMenu.sks in Resources */,
 				84FCCB7B1F4BCC9400F638CA /* Icon-60@2x.png in Resources */,
 				841EEF3C1F263C0A00981E9A /* Run__005.png in Resources */,
 				840181D41F4763A3003DB23C /* Next-Page.png in Resources */,
@@ -350,6 +349,7 @@
 				841EEF341F263B8F00981E9A /* Run__001.png in Resources */,
 				84FCCB631F4BA91800F638CA /* emre ninja reborn 250 YAN.png in Resources */,
 				84131D761F3E225D00D63541 /* GameOver2.sks in Resources */,
+				8408E8601F5323A400746937 /* MainMenu.sks in Resources */,
 				841EEF3A1F263BD800981E9A /* Run__004.png in Resources */,
 				84FCCB611F4B724D00F638CA /* Cyborg Ninja.mp3 in Resources */,
 				8422AB1A1F3CF66A00139D39 /* EndScene.sks in Resources */,

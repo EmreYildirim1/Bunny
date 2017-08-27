@@ -19,7 +19,7 @@ class Credits: SKScene {
         buttonMenu.selectedHandler = {
             let skView = self.view as SKView!
             let scene = MainMenu(fileNamed: "MainMenu")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     
@@ -27,7 +27,7 @@ class Credits: SKScene {
         buttonMenu2.selectedHandler = {
             let skView = self.view as SKView!
             let scene = MainMenu(fileNamed: "MainMenu")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     }

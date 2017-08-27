@@ -23,7 +23,7 @@ class GameOver: SKScene {
         restartButton.selectedHandler = {
             let skView = self.view as SKView!
             let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     
@@ -31,7 +31,7 @@ class GameOver: SKScene {
         restartButton2.selectedHandler = {
             let skView = self.view as SKView!
             let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
         

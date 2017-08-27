@@ -10,6 +10,7 @@ import SpriteKit
 
 var bombSoundEffect: AVAudioPlayer!
 let path = Bundle.main.path(forResource: "Cyborg Ninja.mp3", ofType: nil)
+var isVolumeOn = true
 
 class MainMenu: SKScene {
     
@@ -17,11 +18,13 @@ class MainMenu: SKScene {
     var buttonPlay2: MSButtonNode!
     var creditsButton: MSButtonNode!
     var creditsButton2: MSButtonNode!
-
+    var vb: SKSpriteNode!
     
-
+    
+    
     
     override func didMove(to view: SKView) {
+        vb = self.childNode(withName: "volumeButton") as! SKSpriteNode
         let url = URL(fileURLWithPath: path!)
         do {
             let sound = try AVAudioPlayer(contentsOf: url)
@@ -35,15 +38,7 @@ class MainMenu: SKScene {
         buttonPlay.selectedHandler = {
             let skView = self.view as SKView!
             let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
-            skView?.presentScene(scene)
-        }
-        
-        buttonPlay2 = childNode(withName: "buttonPlay2") as! MSButtonNode
-        buttonPlay2.selectedHandler = {
-            let skView = self.view as SKView!
-            let scene = GameScene(fileNamed: "GameScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
         
@@ -51,18 +46,43 @@ class MainMenu: SKScene {
         creditsButton.selectedHandler = {
             let skView = self.view as SKView!
             let scene = Credits(fileNamed: "Credits")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
             
         }
-    
-        creditsButton2 = childNode(withName: "creditsButton2") as! MSButtonNode
-        creditsButton2.selectedHandler = {
-            let skView = self.view as SKView!
-            let scene = Credits(fileNamed: "Credits")
-            scene?.scaleMode = .aspectFill
-            skView?.presentScene(scene)
-
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            let position = t.location(in: self)
+            let node = atPoint(position)
+            
+            if node.name == "volumeButton" {
+                if isVolumeOn == true {
+                    isVolumeOn = false
+                    let url = URL(fileURLWithPath: path!)
+                    do {
+                        let sound = try AVAudioPlayer(contentsOf: url)
+                        bombSoundEffect = sound
+                        sound.stop()
+                    } catch {
+                        //could not load the file
+                    }
+                    vb.texture = SKTexture(imageNamed: "tex1")
+                }
+                else {
+                    isVolumeOn = true
+                    let url = URL(fileURLWithPath: path!)
+                    do {
+                        let sound = try AVAudioPlayer(contentsOf: url)
+                        bombSoundEffect = sound
+                        bombSoundEffect.numberOfLoops = -1
+                        sound.play()
+                    } catch {
+                        //could not load the file
+                    }
+                    vb.texture = SKTexture(imageNamed: "tex2")
+                }
+            }
         }
     }
 }

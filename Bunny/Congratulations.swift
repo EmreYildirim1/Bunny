@@ -17,7 +17,7 @@ class Congratulations: SKScene {
         buttonPlay.selectedHandler = {
             let skView = self.view as SKView!
             let scene = FinishScene(fileNamed: "FinishScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     }

@@ -19,7 +19,7 @@ class Gmail: SKScene {
         buttonBack.selectedHandler = {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     
@@ -27,7 +27,7 @@ class Gmail: SKScene {
         buttonBack2.selectedHandler = {
             let skView = self.view as SKView!
             let scene = EndScene(fileNamed: "EndScene")
-            scene?.scaleMode = .aspectFill
+            scene?.scaleMode = .aspectFit
             skView?.presentScene(scene)
         }
     }
