@@ -457,7 +457,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             /* Convert new node position back to obstacle layer space */
-            newObstacle2.position = self.convert(CGPoint(x:spawnLocation,y: 305),  to: obstacleLayer2)
+            newObstacle2.position = self.convert(CGPoint(x:spawnLocation,y: 350),  to: obstacleLayer2)
             
             // Reset spawn timer
             spawnTimer = 0
