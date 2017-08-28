@@ -75,6 +75,7 @@
 		84FCCB711F4BC60A00F638CA /* emre kapak 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB701F4BC60A00F638CA /* emre kapak 7.png */; };
 		84FCCB731F4BC8C500F638CA /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB721F4BC8C500F638CA /* iTunesArtwork.png */; };
 		84FCCB7B1F4BCC9400F638CA /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB7A1F4BCC9400F638CA /* Icon-60@2x.png */; };
+		BC8F37AB1F5421F800DC4D9C /* About.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC8F37AA1F5421F800DC4D9C /* About.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		84FCCB701F4BC60A00F638CA /* emre kapak 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emre kapak 7.png"; sourceTree = "<group>"; };
 		84FCCB721F4BC8C500F638CA /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		84FCCB7A1F4BCC9400F638CA /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		BC8F37AA1F5421F800DC4D9C /* About.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = About.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +198,7 @@
 				84A897611F30BAFF00336EF1 /* Obstacle2.sks */,
 				84F10B161F33965E0030A365 /* Player.sks */,
 				8408E85F1F5323A400746937 /* MainMenu.sks */,
-				841B36251F38A603009F687A /* GameScene.sks */,
+				BC8F37AA1F5421F800DC4D9C /* About.sks */,
 				840BD4241F2AC17E00B7CFEB /* GameOver.sks */,
 				8422AB171F3CF26F00139D39 /* Congratulations.sks */,
 				84D173A31F321A2900715214 /* FinishScene.sks */,
@@ -204,6 +206,7 @@
 				8422AB191F3CF66A00139D39 /* EndScene.sks */,
 				840181CF1F475DF9003DB23C /* Gmail.sks */,
 				84FCCB581F4B5A4600F638CA /* Credits.sks */,
+				841B36251F38A603009F687A /* GameScene.sks */,
 				84FCCB5A1F4B5A5B00F638CA /* Credits.swift */,
 				84627D551F256C3A00E1678F /* GameScene.swift */,
 				8422AB151F3CF25700139D39 /* Congratulations.swift */,
@@ -336,6 +339,7 @@
 				840BD4271F2AC26600B7CFEB /* Game-Over-3.png in Resources */,
 				841EEF361F263B9A00981E9A /* Run__002.png in Resources */,
 				84FCCB711F4BC60A00F638CA /* emre kapak 7.png in Resources */,
+				BC8F37AB1F5421F800DC4D9C /* About.sks in Resources */,
 				84627D711F2577F900E1678F /* Tile (2).png in Resources */,
 				8497B60E1F4687CE00984CEE /* Restart-4.png in Resources */,
 				84FCCB7B1F4BCC9400F638CA /* Icon-60@2x.png in Resources */,
