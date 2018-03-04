@@ -21,8 +21,6 @@ class MainMenu: SKScene {
     var vb: SKSpriteNode!
     
     
-    
-    
     override func didMove(to view: SKView) {
         vb = self.childNode(withName: "volumeButton") as! SKSpriteNode
         let url = URL(fileURLWithPath: path!)

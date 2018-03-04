@@ -13,18 +13,21 @@ import GoogleMobileAds
 class GoogleAdViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     
     var currentScene: SKScene!
+    
+    var isRewardReceived: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view = SKView()
+        
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // Do any additional setup after loading the view.
         super.viewDidAppear(animated)
         
-        GADRewardBasedVideoAd.sharedInstance().delegate = self
         if GADRewardBasedVideoAd.sharedInstance().isReady == true {
             GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
         }
@@ -32,7 +35,6 @@ class GoogleAdViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
                                                         withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
         }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,47 +42,46 @@ class GoogleAdViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
-                            didRewardUserWith reward: GADAdReward) {
-       
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        
+        isRewardReceived = true
+        
+        let skView = self.view as! SKView!
+            
+        let scene = self.currentScene
+        scene?.view?.isPaused = false
+        scene?.scaleMode = .aspectFit
+            
+        skView?.presentScene(scene)
+    
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
-       
     }
     
     func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
     }
     
     func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-       
     }
     
     func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        
-        
-        
-        let skView = self.view as! SKView!
-
-        let scene = self.currentScene
-        scene?.view?.isPaused = false
-        scene?.scaleMode = .aspectFit
-        
-        skView?.presentScene(scene)
-        
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-                                                    withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
-        
-       
+        if !isRewardReceived {
+            let skView = self.view as! SKView!
+            
+            let scene = MainMenu(fileNamed: "MainMenu")
+            scene?.scaleMode = .aspectFit
+            
+            skView?.presentScene(scene)
+        }
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
         
     }
     
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
-                            didFailToLoadWithError error: Error) {
-        
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
         showLoadError()
     }
     
