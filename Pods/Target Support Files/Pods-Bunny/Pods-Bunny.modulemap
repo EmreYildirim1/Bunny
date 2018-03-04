@@ -1,0 +1,6 @@
+framework module Pods_Bunny {
+  umbrella header "Pods-Bunny-umbrella.h"
+
+  export *
+  module * { export * }
+}

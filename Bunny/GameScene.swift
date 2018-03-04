@@ -146,8 +146,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if nodeA.name == "obstacle"{
                 nodeA.removeFromParent()
                 
+                self.view?.isPaused = true
+                
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
+                scene?.currentScene = self.scene
                 scene?.scaleMode = .aspectFit
                 skView?.presentScene(scene)
                 
@@ -159,8 +162,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if nodeA.name == "obstacle2"{
                 nodeA.removeFromParent()
                 
+                self.view?.isPaused = true
+                
                 let skView = self.view as SKView!
                 let scene = GameOver(fileNamed: "GameOver")
+                scene?.currentScene = self.scene
+
                 scene?.scaleMode = .aspectFit
                 skView?.presentScene(scene)
             }
@@ -170,7 +177,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Called when a touch begins
-        print(player.position.y)
         //        if player.position.y <= CGFloat(300) {
         // Where can you change player jumping
         //            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
@@ -220,20 +226,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         }
                     case (0,-1):
                         player.run(SKAction(named: "Slide")!)
-                    case (-1,0):
-                        print("swiped left")
-                    case (1,0):
-                        player.run(SKAction(named: "Attack")!)
+                    case (-1,0): break
+                        
+                    case (1,0): break
                     case (1,1):
                         if player.position.y <= CGFloat(300) {
                             // The players jump height
                             player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 500))
                             player.run(SKAction(named: "Jump")!)
                         }
-                    case (-1,-1):
-                        print("swiped diag down-left")
-                    case (-1,1):
-                        print("swiped diag up-left")
+                    case (-1,-1): break
+                        
+                    case (-1,1): break
                     case (1,-1):
                         player.run(SKAction(named: "Slide")!)
                     default:

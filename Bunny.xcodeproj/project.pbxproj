@@ -61,6 +61,7 @@
 		84A897621F30BAFF00336EF1 /* Obstacle2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84A897611F30BAFF00336EF1 /* Obstacle2.sks */; };
 		84D173A41F321A2900715214 /* FinishScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84D173A31F321A2900715214 /* FinishScene.sks */; };
 		84D173A61F321A3F00715214 /* FinishScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D173A51F321A3F00715214 /* FinishScene.swift */; };
+		84E41DCF1F5DA2B400796F91 /* GoogleAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E41DCE1F5DA2B400796F91 /* GoogleAdViewController.swift */; };
 		84F10B171F33965E0030A365 /* Player.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84F10B161F33965E0030A365 /* Player.sks */; };
 		84F4AEBD1F41EE84000D7697 /* Stone Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F4AEBC1F41EE84000D7697 /* Stone Wall.png */; };
 		84F99B8E1F29355400212605 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F99B8D1F29355400212605 /* MainMenu.swift */; };
@@ -75,10 +76,12 @@
 		84FCCB711F4BC60A00F638CA /* emre kapak 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB701F4BC60A00F638CA /* emre kapak 7.png */; };
 		84FCCB731F4BC8C500F638CA /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB721F4BC8C500F638CA /* iTunesArtwork.png */; };
 		84FCCB7B1F4BCC9400F638CA /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FCCB7A1F4BCC9400F638CA /* Icon-60@2x.png */; };
+		99B420F24DBDBE9F68C5647B /* Pods_Bunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDD6797804E72654933411A /* Pods_Bunny.framework */; };
 		BC8F37AB1F5421F800DC4D9C /* About.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC8F37AA1F5421F800DC4D9C /* About.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8341BF11080B12CF503094B2 /* Pods-Bunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bunny/Pods-Bunny.debug.xcconfig"; sourceTree = "<group>"; };
 		840181C91F475929003DB23C /* Games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Games.png; sourceTree = "<group>"; };
 		840181CD1F475DE5003DB23C /* Gmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gmail.swift; sourceTree = "<group>"; };
 		840181CF1F475DF9003DB23C /* Gmail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Gmail.sks; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		84A897611F30BAFF00336EF1 /* Obstacle2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle2.sks; sourceTree = "<group>"; };
 		84D173A31F321A2900715214 /* FinishScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FinishScene.sks; sourceTree = "<group>"; };
 		84D173A51F321A3F00715214 /* FinishScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishScene.swift; sourceTree = "<group>"; };
+		84E41DCE1F5DA2B400796F91 /* GoogleAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAdViewController.swift; sourceTree = "<group>"; };
 		84F10B161F33965E0030A365 /* Player.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Player.sks; sourceTree = "<group>"; };
 		84F4AEBC1F41EE84000D7697 /* Stone Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stone Wall.png"; sourceTree = "<group>"; };
 		84F99B8D1F29355400212605 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenu.swift; path = ../MainMenu.swift; sourceTree = "<group>"; };
@@ -149,7 +153,9 @@
 		84FCCB701F4BC60A00F638CA /* emre kapak 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emre kapak 7.png"; sourceTree = "<group>"; };
 		84FCCB721F4BC8C500F638CA /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		84FCCB7A1F4BCC9400F638CA /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		AEBA2CF0718ACE86CF895F9C /* Pods-Bunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunny.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bunny/Pods-Bunny.release.xcconfig"; sourceTree = "<group>"; };
 		BC8F37AA1F5421F800DC4D9C /* About.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = About.sks; sourceTree = "<group>"; };
+		DBDD6797804E72654933411A /* Pods_Bunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,12 +163,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B420F24DBDBE9F68C5647B /* Pods_Bunny.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28082AC637D293117388A605 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDD6797804E72654933411A /* Pods_Bunny.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3504DA71DEE7668C4D78CF0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8341BF11080B12CF503094B2 /* Pods-Bunny.debug.xcconfig */,
+				AEBA2CF0718ACE86CF895F9C /* Pods-Bunny.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		842C1F151F3A9DC200163014 /* PlayerClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +201,8 @@
 				84627D4E1F256C3A00E1678F /* Bunny */,
 				84627D4D1F256C3A00E1678F /* Products */,
 				84627D6F1F25762400E1678F /* assets */,
+				3504DA71DEE7668C4D78CF0A /* Pods */,
+				28082AC637D293117388A605 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +219,7 @@
 			children = (
 				842C1F151F3A9DC200163014 /* PlayerClass */,
 				84627D4F1F256C3A00E1678F /* AppDelegate.swift */,
+				84E41DCE1F5DA2B400796F91 /* GoogleAdViewController.swift */,
 				84627D531F256C3A00E1678F /* Actions.sks */,
 				8434366E1F2A62DD00DF5527 /* Obstacle.sks */,
 				84A897611F30BAFF00336EF1 /* Obstacle2.sks */,
@@ -280,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84627D641F256C3A00E1678F /* Build configuration list for PBXNativeTarget "Bunny" */;
 			buildPhases = (
+				AF15424B162843692CC6FA63 /* [CP] Check Pods Manifest.lock */,
 				84627D481F256C3A00E1678F /* Sources */,
 				84627D491F256C3A00E1678F /* Frameworks */,
 				84627D4A1F256C3A00E1678F /* Resources */,
+				065107D86A91969660F94708 /* [CP] Embed Pods Frameworks */,
+				5CDBB26330255E8125DDE0DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,7 +330,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Emre Yildirim";
 				TargetAttributes = {
 					84627D4B1F256C3A00E1678F = {
@@ -393,6 +423,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		065107D86A91969660F94708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bunny/Pods-Bunny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CDBB26330255E8125DDE0DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bunny/Pods-Bunny-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF15424B162843692CC6FA63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bunny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84627D481F256C3A00E1678F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -406,6 +487,7 @@
 				84627D501F256C3A00E1678F /* AppDelegate.swift in Sources */,
 				840181CE1F475DE5003DB23C /* Gmail.swift in Sources */,
 				84131D781F3E227300D63541 /* GameOver2.swift in Sources */,
+				84E41DCF1F5DA2B400796F91 /* GoogleAdViewController.swift in Sources */,
 				8422AB1E1F3CFA4100139D39 /* EndScene.swift in Sources */,
 				84F99B8E1F29355400212605 /* MainMenu.swift in Sources */,
 				845503561F2A7203003BBA19 /* CGFloat+Extensions.swift in Sources */,
@@ -447,7 +529,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -455,7 +539,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -497,7 +585,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -505,10 +595,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -532,11 +627,16 @@
 		};
 		84627D651F256C3A00E1678F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8341BF11080B12CF503094B2 /* Pods-Bunny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 79447L9Z9N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bunny/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EmreYildirim.250Ninja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,11 +647,16 @@
 		};
 		84627D661F256C3A00E1678F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEBA2CF0718ACE86CF895F9C /* Pods-Bunny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 79447L9Z9N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Bunny/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EmreYildirim.250Ninja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
