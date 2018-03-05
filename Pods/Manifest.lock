@@ -1,12 +1,27 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FBSDKCoreKit (4.31.0):
+    - Bolts (~> 1.7)
   - Google-Mobile-Ads-SDK (7.29.0)
 
 DEPENDENCIES:
+  - FacebookCore
   - Google-Mobile-Ads-SDK
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FBSDKCoreKit: 54db4c581123745d25a9f7c1608020b3aeabd118
   Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
 
-PODFILE CHECKSUM: eba88d51b30c249ace6db275a178f5f26f8f48dd
+PODFILE CHECKSUM: ba7206a108f26673f4afb433e81417ea037648fd
 
 COCOAPODS: 1.4.0

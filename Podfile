@@ -7,5 +7,7 @@ target 'Bunny' do
 
   # Pods for Bunny
   pod 'Google-Mobile-Ads-SDK'
+  
+  pod 'FacebookCore'
 
 end
