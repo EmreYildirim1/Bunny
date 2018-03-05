@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-4824390896428706~4066111759")
         
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-                                                    withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+                                                    withAdUnitID: "ca-app-pub-4824390896428706~4066111759")
         return true
     }
 

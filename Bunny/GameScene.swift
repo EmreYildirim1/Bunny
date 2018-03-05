@@ -81,7 +81,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* The connection of player and the scene */
         player = self.childNode(withName: "//player") as! SKSpriteNode!
-        
+
         /* The connection of scrollLayer and the scene */
         scrollLayer = self.childNode(withName: "scrollLayer")
         

@@ -33,7 +33,7 @@ class GoogleAdViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         }
         else {
             GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-                                                        withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+                                                        withAdUnitID: "ca-app-pub-4824390896428706~4066111759")
         }
     }
 
@@ -54,7 +54,7 @@ class GoogleAdViewController: UIViewController, GADRewardBasedVideoAdDelegate {
             
         skView?.presentScene(scene)
     
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-4824390896428706~4066111759")
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
